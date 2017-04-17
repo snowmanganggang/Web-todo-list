@@ -1,0 +1,371 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.TodoListApp {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 0;
+}
+
+.side-bar {
+  -webkit-flex: initial;
+          flex: initial;
+  position: fixed;
+  height: 100%;
+  width: 201px;
+  left: 0;
+  top: 0;
+  background-color: #BDEEEA;
+}
+
+.AppTitle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100px;
+  width: 201px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+  vertical-lign: middle;
+  line-height: 100px;
+}
+
+.count-box1 {
+  position: absolute;
+  width: 201px;
+  height: 100px;
+  bottom: 210px;
+  left: 0;
+  background-color: #74DAD2;
+}
+
+.count-box2 {
+  position: absolute;
+  width: 201px;
+  height: 100px;
+  bottom: 80px;
+  left: 0;
+  background-color: #74DAD2;
+}
+
+.count-name {
+  position: absolute;
+  width: 201px;
+  top: 20px;
+  text-align: center;
+  font: 20px Montserrat-Medium, sans-serif;
+  letter-spacing: 1px;
+}
+
+.count {
+  position: absolute;
+  width: 201px;
+  bottom: 20px;
+  text-align: center;
+  font: 26px Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+.web-programming {
+  position: absolute;
+  width: 201px;
+  bottom: 20px;
+  left: 0;
+  font: 12px Montserrat-SemiBold;
+  color: #999999;
+  text-align: center;
+}
+
+.top-bar {
+  -webkit-flex: none;
+          flex: none;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  margin-left: 201px;
+  background-color: white;
+  z-index: 1000000;
+}
+
+.main-container {
+  -webkit-flex: 1;
+          flex: 1;
+  position: relative;
+  height: 100%;
+  width: available;
+  margin-left: 221px;
+  margin-right: 20px;
+  margin-top: 15px;
+  background-color: #eeeeee;
+}
+
+.log-in {
+  display: block;
+  position: fixed;
+  top: 40px;
+  right: 70px;
+  font: 20px Montserrat-SemiBold;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #aaaaaa;
+}
+
+.add-list {
+  display: block;
+  background-color: #1085e0;
+  border: none;
+  position: fixed;
+  width: 228px;
+  height: 43px;
+  top: 29px;
+  left: 270px;
+  font: 18px Montserrat-SemiBold;
+  letter-spacing: 1px; 
+  color: white;
+  line-height: 41px;
+  padding: 0 auto;
+}
+
+.add-list:hover {
+  background-color: #15aaee;
+}
+
+.add-list > span {
+  line-height: 37px;
+  font-size: 24px;
+}
+
+.TodoList {
+  display: inline-block;
+  position: relative;
+  width: 380px;
+  height: 540px;
+  background-color: white;
+  margin: 15px;
+}
+
+.list-top {
+  position: relative;
+  height: 15px;
+  width: inherit;
+}
+
+.list-bottom {
+  position: absolute;
+  height: 64px;
+  width: 380px;
+  bottom: 0;
+  left: 0;
+}
+
+.list-title {
+  position: absolute;
+  font: 24pt Montserrat-Medium;
+  letter-spacing: 1px;
+  margin: 20px;
+}
+
+.c0 { background-color: #f46036; }
+.c1 { background-color: #3d3286; }
+.c2 { background-color: #1b998b; }
+.c3 { background-color: #e71d36; }
+.c4 { background-color: #c5d86d; }
+
+button.edit-name {
+  background: url(/image/pencil.png) no-repeat;
+  position: absolute;
+  border: none;
+  width: 40px;
+  height: 40px;
+  right: 21px;
+  top: 35px;
+  background-size: 40px 40px;
+  padding: 0;
+  z-index: 100;
+}
+
+button.edit-name:hover {
+  background-size: 50px 50px;
+  background-position: -5px -5px;
+}
+
+input.edit-name {
+  position: absolute;
+  width: 280px;
+  height: 42px;
+  left: 13px;
+  top: 33px;
+  padding-left: 5px;
+  font: 24pt Montserrat-Medium;
+  letter-spacing: 1px;
+}
+
+button.delete {
+  background: url(/image/delete.png) no-repeat;
+  position: absolute;
+  border: none;
+  width: 32px;
+  height: 32px;
+  left: -16px;
+  top: -10px;
+  background-size: 48px 48px;
+  background-position: -8px -8px;
+  padding: 0;
+  z-index: 100;
+}
+
+button.delete:hover {
+  width: 52px;
+  height: 52px;
+  left: -20px;
+  top: -14px;
+  background-size: 56px 56px;
+  background-position: -8px -8px;
+}
+
+.todo-input {
+  position: absolute;
+  border: none;
+  height: 40px;
+  width: 356px;
+  bottom: 0;
+  left: 0;
+  margin: 12px;
+  padding-left: 12px;
+  font: 16pt Montserrat-Medium;
+}
+
+input.todo-input[value="Add new todos..."] {
+  font-style: italic;
+  color: #9a9a9a
+}
+
+.todos-container {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  bottom: 64px;
+}
+
+.Todo {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 350px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  background-color: #eeeeee;
+  font: 16pt Montserrat;
+  font-weight: 400;
+}
+
+.Todo > input {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin: 16px;
+  background-color: white;
+}
+
+.Todo > div {
+  position: absolute;
+  height: 50px;
+  margin-left: 60px;
+  vertical-align: middle;
+  line-height: 50px;
+  letter-spacing: 1px;
+}
+
+.Todo > div[class="true"] {
+  color: #aaaaaa;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.Todo > button {
+  position: absolute;
+  height: 50px;
+  border: none;
+  background-color: #eeeeee;
+  right: 0;
+  padding-right: 18px; 
+  padding-top: 0;
+  padding-bottom: 4px;
+  font-stretch: expanded;
+  font: 20pt Montserrat;
+  color: #999999;
+}
+
+.Todo > button:hover {
+  font-size: 26pt;
+  padding-right: 16px;
+}
+
+button:focus{
+  border: none;
+  outline: 0;
+}
+
+/*@font-face {
+  font-family: "Montserrat";
+  src: url('https://fonts.googleapis.com/css?family=Montserrat');
+}*/
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('/font/Montserrat-Bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url('/font/Montserrat-SemiBold.otf');
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('/font/Montserrat-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url('/font/Montserrat-Medium.otf');
+}
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url('/font/Montserrat-Light.otf');
+}
+
+/*
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+*/
